@@ -1,0 +1,308 @@
+
+body {
+	margin: 0;
+	overflow: hidden;
+}
+.menu {
+	position: absolute;
+	top: 44%;
+	right: 0;
+	transform: rotate(90deg);
+	margin-right:-345px;
+	position: fixed;
+	z-index: 99999;
+	background:black;
+	height: 100px;
+	width: 101vh;
+
+}
+aside {
+	display: flex;
+	justify-content: space-around;
+}
+aside nav ul {
+	list-style: none;
+	text-align: center;
+	padding: 35px 0;
+	margin: 0;
+}
+
+nav.links ul li {
+	display: inline-block;
+	padding:0 30px;
+	cursor: pointer;
+}
+nav.links ul li a {
+	font-family: RalewaySB;
+	font-size:15px;
+	font-weight: bold;
+	color:white;
+}
+nav.links ul li a:hover {
+	 color:#031b85;
+	 text-decoration: none;
+}
+nav#link-side ul li a {
+	font-size: 13px;
+}
+/*
+*MAIN
+*/
+ .box {
+  width:100vw;
+  height:100vh;
+  display:inline-block;
+  position:relative;
+}
+ .second {
+	position: relative;
+	background-image: url(../img/poster-2.jpg);
+	background-repeat: no-repeat;
+	height: 800px;
+	width: auto;
+	margin:0px 200px;
+	
+}
+
+.second-1 {
+	position: relative;
+	background-image: url('../img/poster-3.jpg');
+	background-repeat: no-repeat;
+	height: 800px;
+	width: auto;
+	margin:0px 200px;
+	
+}
+
+.second-2 {
+	position: relative;
+	background-image: url(../img/poster-1.jpg);
+	background-repeat: no-repeat;
+	height: 800px;
+	width: auto;
+	margin:0px 200px;
+	
+}
+/*
+.second:hover .text-section, 
+.second-1:hover .text-section,
+.second-2:hover .text-section-2 {
+	transform: rotate(0deg);
+}*/
+.text-section {
+	position:absolute;
+	width:500px;
+	height:40px;
+	text-align: center;
+	background:black;
+	color:white;
+	font-family: RalewaySB;
+	font-size: 13px;
+	transform: rotate(90deg);
+	top:65%;
+	left:66%;
+	pointer-events: none;
+} 
+
+.text-section p, .text-section-2 p {
+	padding: 10px;
+}
+.text-section-2 {
+	position:absolute;
+	width:500px;
+	height:40px;
+	text-align: center;
+	background:black;
+	color:white;
+	font-family: RalewaySB;
+	font-size: 13px;
+	transform: rotate(90deg);
+	top:65%;
+	left:29%;
+	pointer-events: none;
+}
+
+/*
+*HOVER IMAGE
+*/
+.hover-img {
+	left: 6%;
+	position: absolute;
+	top: 30%;
+}
+.hover-img h1 {
+	font-size: 5.7rem;
+	font-family:DroidS;
+	color:white;
+	z-index: 99;
+}
+.hover-img a { 
+  position:relative; 
+  color:#031b85;
+  text-decoration: none;
+}
+.hover-img a span { 
+  position:absolute;
+  top:-80px;
+  left:300px;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+.hover-img h1 a:hover span { 
+	opacity: 1;
+  display:block; 
+  z-index: -1;
+
+}
+
+.blink {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 80%;
+	top: 50%;
+}
+
+.blink span {
+	animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+	0% {visibility: hidden;}
+	50% {visibility: hidden;}
+	100% {opacity: visible;}
+}
+
+.top-text {
+	position: absolute;
+	left: 6%;
+	top:5%;
+	display: inline-block;
+}
+.top-text h5 {
+	font-family:  RalewaySB;
+	color:#031b85;
+	font-size: 14px;
+
+}
+
+.allrights {
+	position: absolute;
+	left: 6%;
+	top:95%;
+}
+.allrights h5 {
+	font-size: 9px;
+	font-family: RalewaySB;
+	color:white;
+}
+
+
+#container {
+  overflow-y:scroll;
+  overflow-x:hidden;
+  transform: rotate(270deg) translateX(-100%);
+  transform-origin: left top ;
+  position:absolute;
+  width:100vh;
+  height:100vw;
+  background:black;
+}
+#container2 {
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  white-space:nowrap;
+ 
+}
+.background {
+	position: absolute; 
+	background-image: url(../img/img1.JPG);
+	background-repeat: no-repeat;
+}
+
+
+ #container::-webkit-scrollbar {
+ 	display: none;
+}
+/*FONTS*/
+@font-face {
+	font-family: DroidSansMono;
+	src:url('../fonts/DroidSansMono.ttf');
+}
+@font-face {
+	font-family: RalewaySB;
+	src:url('../fonts/Raleway-SemiBold.ttf');
+}
+@font-face {
+	font-family: DroidSans;
+	src:url('../fonts/DroidSans-Bold.ttf');
+}
+
+@font-face {
+	font-family:DroidS;
+	 src:url('../fonts/WalkwayBold.ttf');
+}
+
+/*
+*MEDIA QUERIES 
+*/
+
+@media (max-width: 768px) {
+	.hover-img h1 {
+		font-size: 3.7rem;
+
+	}
+
+	.hover-img a span { 
+		top:-120px;
+		left:150px;
+	}
+	.hover-img h1 a span img {
+		width: 300px;
+		height: 300px;
+	}
+	.blink {
+		top: 75%;
+		left: 65%;
+	}
+	.second, 
+	.second-1 {
+		margin: 0 100px;
+	}
+	.second-2 {
+		margin: 0 50px;
+	}
+
+	.text-section {
+		left: 60%;
+	}
+	.text-section-2 {
+		left: 55%;
+	}
+}
+@media (max-width: 375px) {
+	.blink {
+		left:50%;
+	}
+	.hover-img {
+
+	}
+	.hover-img h1 {
+		font-size:3rem;
+		
+	}
+	.hover-img a span { 
+		top:-40px;
+		left:50px;
+	}
+	.hover-img h1 a span img {
+		width: 150px;
+		height: 150px;
+	}
+	.second {
+		margin: 0px;
+	}
+	
+
+}
